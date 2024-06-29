@@ -1,3 +1,4 @@
 ﻿  Source.cpp
 C:\prkt\praktica\Source.cpp(21,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\prkt\praktica\Source.cpp(72,15): warning C4244: инициализация: преобразование "time_t" в "double", возможна потеря данных
   praktica.vcxproj -> C:\prkt\praktica\x64\Debug\praktica.exe
