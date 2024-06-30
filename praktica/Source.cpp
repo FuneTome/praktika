@@ -3,10 +3,11 @@
 using namespace std;
 
 void choice_sort(int n, int mass[]) {
-	int min_i = 0, buf;
+	int buf = 0;
 	for (int i = 0; i < n - 1; i++) {
+		int min_i = i;
 		for (int j = i + 1; j < n; j++) {
-			if (mass[j] < mass[i]) min_i = j;
+			if (mass[j] < mass[min_i]) { min_i = j; }
 		}
 		if (min_i != i) {
 			buf = mass[i];
