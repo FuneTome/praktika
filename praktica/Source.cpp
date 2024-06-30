@@ -3,16 +3,15 @@
 using namespace std;
 
 void choice_sort(int n, int mass[]) {
-	int min_i = 0;
-	for (int i = 0; i < n; i++) {
-		int min = mass[i];
+	int min_i = 0, buf;
+	for (int i = 0; i < n - 1; i++) {
 		for (int j = i + 1; j < n; j++) {
-			if (mass[j] < min) {
-				min = mass[j];
-				min_i = j;
-				mass[j] = mass[i];
-				mass[i] = min;
-			}
+			if (mass[j] < mass[i]) min_i = j;
+		}
+		if (min_i != i) {
+			buf = mass[i];
+			mass[i] = mass[min_i];
+			mass[min_i] = buf;
 		}
 	}
 }
