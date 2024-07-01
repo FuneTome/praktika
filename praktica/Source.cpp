@@ -27,10 +27,11 @@ void create_file(int n) {
 void menu() {
 	int n, count;
 	string name, t = ".txt";
-	cout << "\n\t1. Случайный ввод\n\t2. Ручной ввод\n\t3. Ввод с файла\n\t4. Выход\n\n\tВыберите пункт: ";
-	cin >> n;
-	cout << endl;
+	cout << "\n\t1. Случайный ввод\n\t2. Ручной ввод\n\t3. Ввод с файла\n\t4. Выход\n\n";
 	while (true){
+		cout << "\tВыберите пункт: ";
+		cin >> n;
+		cout << endl;
 	switch (n) {
 	case 1: {
 		int n, buf = 0;
@@ -66,11 +67,7 @@ void menu() {
 			cin >> mass[i];
 			cout << endl;
 		}
-		time_t start = clock();
 		choice_sort(n, mass);
-		time_t stop = clock();
-		double time = stop - start;
-		cout << "\tВремя сортировки массива состовляет: " << time << " милисекунд\n\n" << "Сортированный массив: ";
 		for (int i = 0; i < n; i++) {
 			cout << mass[i] << " ";
 		}
@@ -99,8 +96,8 @@ void menu() {
 		fout.close();
 		exit(0);
 	}
-	case 4: { exit(0); } break;
-	default: { cout << "Такого пункта нет, попробуйте ещё раз" << endl; }break;
+	case 4: { exit(0); }
+	default: { cout << "Такого пункта нет, попробуйте ещё раз" << endl;}
 	}
 }
 }
